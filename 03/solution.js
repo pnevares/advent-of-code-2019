@@ -8,7 +8,7 @@ module.exports = lines => {
       switch (direction) {
         case "R": {
           for (let moved = 0; moved < distance; moved++) {
-            lastPosition[1] = lastPosition[1] + 1;
+            lastPosition[1] += 1;
             if (rows[0].length !== lastPosition[1] + 1) {
               for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
                 rows[rowIndex].push(".");
@@ -20,21 +20,21 @@ module.exports = lines => {
         }
         case "L": {
           for (let moved = 0; moved < distance; moved++) {
-            lastPosition[1] = lastPosition[1] - 1;
+            lastPosition[1] -= 1;
             rows[lastPosition[0]].unshift("-");
           }
           break;
         }
         case "U": {
           for (let moved = 0; moved < distance; moved++) {
-            lastPosition[0] = lastPosition[0] - 1;
+            lastPosition[0] -= 1;
             rows.unshift(["|"]);
           }
           break;
         }
         case "D": {
           for (let moved = 0; moved < distance; moved++) {
-            lastPosition[0] = lastPosition[0] + 1;
+            lastPosition[0] += 1;
             if (rows.length !== lastPosition[0] + 1) {
               rows.push(new Array(rows[0].length).fill("."));
             }
