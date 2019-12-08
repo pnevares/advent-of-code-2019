@@ -16,12 +16,13 @@ module.exports = lines => {
           }
           for (let moved = 0; moved < distance; moved++) {
             lastPosition[1] += 1;
-            if (rows[0].length !== lastPosition[1] + 1) {
+            if (rows[0].length < lastPosition[1] + 1) {
               for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
                 rows[rowIndex].push(".");
               }
             }
-            rows[lastPosition[0]][lastPosition[1]] = "-";
+            rows[lastPosition[0]][lastPosition[1]] =
+              rows[lastPosition[0]][lastPosition[1]] !== "." ? "X" : "-";
           }
           break;
         }
@@ -40,7 +41,8 @@ module.exports = lines => {
             } else {
               lastPosition[1] -= 1;
             }
-            rows[lastPosition[0]][lastPosition[1]] = "-";
+            rows[lastPosition[0]][lastPosition[1]] =
+              rows[lastPosition[0]][lastPosition[1]] !== "." ? "X" : "-";
           }
           break;
         }
@@ -57,7 +59,8 @@ module.exports = lines => {
             } else {
               lastPosition[0] -= 1;
             }
-            rows[lastPosition[0]][lastPosition[1]] = "|";
+            rows[lastPosition[0]][lastPosition[1]] =
+              rows[lastPosition[0]][lastPosition[1]] !== "." ? "X" : "|";
           }
           break;
         }
@@ -73,7 +76,8 @@ module.exports = lines => {
             if (rows.length < lastPosition[0] + 1) {
               rows.push(new Array(rows[0].length).fill("."));
             }
-            rows[lastPosition[0]][lastPosition[1]] = "|";
+            rows[lastPosition[0]][lastPosition[1]] =
+              rows[lastPosition[0]][lastPosition[1]] !== "." ? "X" : "|";
           }
           break;
         }
