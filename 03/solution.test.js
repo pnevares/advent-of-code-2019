@@ -22,5 +22,11 @@ describe("solution 01", () => {
     it("should handle [R4, D4]", () => {
       expect(solution([["R4", "D4"]])).toMatchSnapshot();
     });
+    it("should handle [R4, U4]", () => {
+      expect(solution([["R4", "U4"]])).toMatchSnapshot();
+    });
+    it("should handle [U4, L4]", () => {
+      expect(solution([["U4", "L4"]])).toMatchSnapshot();
+    });
   });
 });

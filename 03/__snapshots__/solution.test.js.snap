@@ -51,3 +51,23 @@ o----
 ....|
 "
 `;
+
+exports[`solution 01 can draw two lines should handle [R4, U4] 1`] = `
+"
+....|
+....|
+....|
+....|
+o----
+"
+`;
+
+exports[`solution 01 can draw two lines should handle [U4, L4] 1`] = `
+"
+----|
+....|
+....|
+....|
+....o
+"
+`;

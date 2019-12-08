@@ -20,15 +20,25 @@ module.exports = lines => {
         }
         case "L": {
           for (let moved = 0; moved < distance; moved++) {
-            lastPosition[1] -= 1;
-            rows[lastPosition[0]].unshift("-");
+            if (lastPosition[1] === 0) {
+              for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+                rows[rowIndex].unshift(".");
+              }
+            } else {
+              lastPosition[1] -= 1;
+            }
+            rows[lastPosition[0]][lastPosition[1]] = "-";
           }
           break;
         }
         case "U": {
           for (let moved = 0; moved < distance; moved++) {
-            lastPosition[0] -= 1;
-            rows.unshift(["|"]);
+            if (lastPosition[0] === 0) {
+              rows.unshift(new Array(rows[0].length).fill("."));
+            } else {
+              lastPosition[0] -= 1;
+            }
+            rows[lastPosition[0]][lastPosition[1]] = "|";
           }
           break;
         }
