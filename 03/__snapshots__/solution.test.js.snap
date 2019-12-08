@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`solution 01 can draw a single line should handle paths that go down 1`] = `
+"o
+|
+|
+|
+|"
+`;
+
+exports[`solution 01 can draw a single line should handle paths that go left 1`] = `"----o"`;
+
+exports[`solution 01 can draw a single line should handle paths that go right 1`] = `"o----"`;
+
+exports[`solution 01 can draw a single line should handle paths that go up 1`] = `
+"|
+|
+|
+|
+o"
+`;
+
+exports[`solution 01 can draw two lines should handle [D4, R4] 1`] = `
+"o
+|
+|
+|
+|----"
+`;
