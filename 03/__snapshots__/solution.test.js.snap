@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`solution 01 can draw a single line path that goes down 1`] = `
+"
+o
+|
+|
+|
+|
+"
+`;
+
+exports[`solution 01 can draw a single line path that goes left 1`] = `
+"
+----o
+"
+`;
+
+exports[`solution 01 can draw a single line path that goes right 1`] = `
+"
+o----
+"
+`;
+
+exports[`solution 01 can draw a single line path that goes up 1`] = `
+"
+|
+|
+|
+|
+o
+"
+`;
+
+exports[`solution 01 can draw two lines [D4, R4] 1`] = `
+"
+o....
+|....
+|....
+|....
++----
+"
+`;
+
+exports[`solution 01 can draw two lines [R4, D4] 1`] = `
+"
+o---+
+....|
+....|
+....|
+....|
+"
+`;
+
+exports[`solution 01 can draw two lines [R4, U4] 1`] = `
+"
+....|
+....|
+....|
+....|
+o---+
+"
+`;
+
+exports[`solution 01 can draw two lines [U4, L4] 1`] = `
+"
+----+
+....|
+....|
+....|
+....o
+"
+`;
+
+exports[`solution 01 can handle combined example [R8,U5,L5,D3] and [U7,R6,D4,L4] 1`] = `
+"
++-----+..
+|.....|..
+|..+--X-+
+|..|..|.|
+|.-X--+.|
+|..|....|
+|.......|
+o-------+
+"
+`;
+
+exports[`solution 01 can handle single examples [R8,U5,L5,D3] 1`] = `
+"
+...+----+
+...|....|
+...|....|
+...|....|
+........|
+o-------+
+"
+`;
+
+exports[`solution 01 can handle single examples [U7,R6,D4,L4] 1`] = `
+"
++-----+
+|.....|
+|.....|
+|.....|
+|.----+
+|......
+|......
+o......
+"
+`;
