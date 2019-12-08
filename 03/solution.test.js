@@ -29,9 +29,22 @@ describe("solution 01", () => {
       expect(solution([["U4", "L4"]])).toMatchSnapshot();
     });
   });
-  describe("can handle examples", () => {
+  describe("can handle single examples", () => {
     it("[R8,U5,L5,D3]", () => {
       expect(solution([["R8", "U5", "L5", "D3"]])).toMatchSnapshot();
+    });
+    it("[U7,R6,D4,L4]", () => {
+      expect(solution([["U7", "R6", "D4", "L4"]])).toMatchSnapshot();
+    });
+  });
+  describe("can handle combined example", () => {
+    it("[R8,U5,L5,D3] and [U7,R6,D4,L4]", () => {
+      expect(
+        solution([
+          ["R8", "U5", "L5", "D3"],
+          ["U7", "R6", "D4", "L4"]
+        ])
+      ).toMatchSnapshot();
     });
   });
 });

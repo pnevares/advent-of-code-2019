@@ -72,7 +72,20 @@ exports[`solution 01 can draw two lines [U4, L4] 1`] = `
 "
 `;
 
-exports[`solution 01 can handle examples [R8,U5,L5,D3] 1`] = `
+exports[`solution 01 can handle combined example [R8,U5,L5,D3] and [U7,R6,D4,L4] 1`] = `
+"
++-----+........
+|.....|........
+|..+--|-+......
+|..|..|.|......
+|.----+.|......
+|..|....|......
+|.......|......
+o-------+......
+"
+`;
+
+exports[`solution 01 can handle single examples [R8,U5,L5,D3] 1`] = `
 "
 ...+----+
 ...|....|
@@ -80,5 +93,18 @@ exports[`solution 01 can handle examples [R8,U5,L5,D3] 1`] = `
 ...|....|
 ........|
 o-------+
+"
+`;
+
+exports[`solution 01 can handle single examples [U7,R6,D4,L4] 1`] = `
+"
++-----+
+|.....|
+|.....|
+|.....|
+|.----+
+|......
+|......
+o......
 "
 `;

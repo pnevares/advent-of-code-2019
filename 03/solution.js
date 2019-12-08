@@ -1,8 +1,9 @@
 module.exports = lines => {
   const rows = [["o"]];
-  const lastPosition = [0, 0];
+  let lastPosition;
 
   lines.forEach(line => {
+    lastPosition = findCentralPort(rows);
     line.forEach(path => {
       const [direction, distance] = [path.slice(0, 1), path.slice(1)];
       switch (direction) {
@@ -83,13 +84,15 @@ module.exports = lines => {
   return `\n${rows.map(row => row.join("")).join("\n")}\n`;
 };
 
-// ...........
-// ...........
-// ...........
-// ....+----+.
-// ....|....|.
-// ....|....|.
-// ....|....|.
-// .........|.
-// .o-------+.
-// ...........
+function findCentralPort(rows) {
+  let result;
+  rows.some((row, rowIndex) => {
+    const colIndexOfPort = row.indexOf("o");
+    if (colIndexOfPort !== -1) {
+      result = [rowIndex, colIndexOfPort];
+      return true;
+    }
+    return false;
+  });
+  return result;
+}
