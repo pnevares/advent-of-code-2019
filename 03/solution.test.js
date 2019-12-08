@@ -19,5 +19,8 @@ describe("solution 01", () => {
     it("should handle [D4, R4]", () => {
       expect(solution([["D4", "R4"]])).toMatchSnapshot();
     });
+    it("should handle [R4, D4]", () => {
+      expect(solution([["R4", "D4"]])).toMatchSnapshot();
+    });
   });
 });
