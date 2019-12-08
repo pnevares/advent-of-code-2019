@@ -7,6 +7,12 @@ module.exports = lines => {
       const [direction, distance] = [path.slice(0, 1), path.slice(1)];
       switch (direction) {
         case "R": {
+          if (
+            rows[lastPosition[0]][lastPosition[1]] !== "-" &&
+            rows[lastPosition[0]][lastPosition[1]] !== "o"
+          ) {
+            rows[lastPosition[0]][lastPosition[1]] = "+";
+          }
           for (let moved = 0; moved < distance; moved++) {
             lastPosition[1] += 1;
             if (rows[0].length !== lastPosition[1] + 1) {
@@ -19,6 +25,12 @@ module.exports = lines => {
           break;
         }
         case "L": {
+          if (
+            rows[lastPosition[0]][lastPosition[1]] !== "-" &&
+            rows[lastPosition[0]][lastPosition[1]] !== "o"
+          ) {
+            rows[lastPosition[0]][lastPosition[1]] = "+";
+          }
           for (let moved = 0; moved < distance; moved++) {
             if (lastPosition[1] === 0) {
               for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
@@ -32,6 +44,12 @@ module.exports = lines => {
           break;
         }
         case "U": {
+          if (
+            rows[lastPosition[0]][lastPosition[1]] !== "|" &&
+            rows[lastPosition[0]][lastPosition[1]] !== "o"
+          ) {
+            rows[lastPosition[0]][lastPosition[1]] = "+";
+          }
           for (let moved = 0; moved < distance; moved++) {
             if (lastPosition[0] === 0) {
               rows.unshift(new Array(rows[0].length).fill("."));
@@ -43,6 +61,12 @@ module.exports = lines => {
           break;
         }
         case "D": {
+          if (
+            rows[lastPosition[0]][lastPosition[1]] !== "|" &&
+            rows[lastPosition[0]][lastPosition[1]] !== "o"
+          ) {
+            rows[lastPosition[0]][lastPosition[1]] = "+";
+          }
           for (let moved = 0; moved < distance; moved++) {
             lastPosition[0] += 1;
             if (rows.length < lastPosition[0] + 1) {
