@@ -45,7 +45,7 @@ module.exports = lines => {
         case "D": {
           for (let moved = 0; moved < distance; moved++) {
             lastPosition[0] += 1;
-            if (rows.length !== lastPosition[0] + 1) {
+            if (rows.length < lastPosition[0] + 1) {
               rows.push(new Array(rows[0].length).fill("."));
             }
             rows[lastPosition[0]][lastPosition[1]] = "|";

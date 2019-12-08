@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`solution 01 can draw a single line should handle paths that go down 1`] = `
+exports[`solution 01 can draw a single line path that goes down 1`] = `
 "
 o
 |
@@ -10,19 +10,19 @@ o
 "
 `;
 
-exports[`solution 01 can draw a single line should handle paths that go left 1`] = `
+exports[`solution 01 can draw a single line path that goes left 1`] = `
 "
 ----o
 "
 `;
 
-exports[`solution 01 can draw a single line should handle paths that go right 1`] = `
+exports[`solution 01 can draw a single line path that goes right 1`] = `
 "
 o----
 "
 `;
 
-exports[`solution 01 can draw a single line should handle paths that go up 1`] = `
+exports[`solution 01 can draw a single line path that goes up 1`] = `
 "
 |
 |
@@ -32,7 +32,7 @@ o
 "
 `;
 
-exports[`solution 01 can draw two lines should handle [D4, R4] 1`] = `
+exports[`solution 01 can draw two lines [D4, R4] 1`] = `
 "
 o....
 |....
@@ -42,7 +42,7 @@ o....
 "
 `;
 
-exports[`solution 01 can draw two lines should handle [R4, D4] 1`] = `
+exports[`solution 01 can draw two lines [R4, D4] 1`] = `
 "
 o----
 ....|
@@ -52,7 +52,7 @@ o----
 "
 `;
 
-exports[`solution 01 can draw two lines should handle [R4, U4] 1`] = `
+exports[`solution 01 can draw two lines [R4, U4] 1`] = `
 "
 ....|
 ....|
@@ -62,12 +62,23 @@ o----
 "
 `;
 
-exports[`solution 01 can draw two lines should handle [U4, L4] 1`] = `
+exports[`solution 01 can draw two lines [U4, L4] 1`] = `
 "
 ----|
 ....|
 ....|
 ....|
 ....o
+"
+`;
+
+exports[`solution 01 can handle examples [R8,U5,L5,D3] 1`] = `
+"
+...-----|
+...|....|
+...|....|
+...|....|
+........|
+o--------
 "
 `;
