@@ -1,6 +1,6 @@
 const solution = require("./solution");
 
-describe("solution 01 part 2", () => {
+describe("solution 04 part 2", () => {
   describe("examples from problem", () => {
     it("112233", () => {
       expect(solution([112233, 112233])).toEqual(1);

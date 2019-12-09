@@ -1,6 +1,6 @@
 const solution = require("./solution");
 
-describe("solution 01", () => {
+describe("solution 03", () => {
   describe("can draw a single line", () => {
     it("path that goes right", () => {
       expect(solution([["R4"]])).toMatchSnapshot();
